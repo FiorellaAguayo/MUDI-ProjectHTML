@@ -1,0 +1,287 @@
+
+body {
+    font-family: "Lucida Console", "Courier New", monospace;
+    background: linear-gradient(to right, rgb(189, 189, 255), rgb(255, 233, 236));
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10; 
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #92a4ff;
+}
+
+h1 {
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+    color: #92a4ff;
+    font-family: "Arial", cursive;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+header h1 img {
+    max-width: 35px;
+    margin-right: 10px;
+    vertical-align: middle; 
+    margin-top: -12px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px; /* Tamaño de la fuente */
+    margin: 15px 0; /* Añade espacio en la parte superior e inferior */
+    color: #92a4ff; /* Color del texto */
+    font-family: "Comic Sans MS", cursive, sans-serif; /* Tipo de fuente */
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 22px; /* Tamaño de la fuente */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+    font-family: "Arial", sans-serif; /* Tipo de fuente */
+    margin-top: 0; /* Reduce o elimina el margen superior */
+    margin-left: 20px; /* Ajusta el valor según tu preferencia */
+}
+
+.image {
+    float: right;
+    margin: 0 0 20px 20px;
+    max-width: 25%;
+    height: auto;
+}
+
+.image2 {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 25%;
+    height: auto;
+}
+
+.article {
+    float: left;
+    width: 70%;
+    background-color: #FFF;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #CCC;
+}
+
+.banner {
+    display: flex;
+    overflow-x: auto;
+    max-height: 300px;
+}
+
+.banner img {
+    width: 100%; /* Las imágenes ocuparán el 100% del ancho del contenedor */
+    height: auto;
+}
+
+
+.footer p {
+    color: white;
+    font-size: 15px;
+}
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+.categories-container {
+    display: flex;
+    justify-content: space-around; /* Esto distribuye el espacio alrededor de los elementos */
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no hay espacio suficiente */
+}
+
+.category {
+    width: 100%; /* Esto asegura que .category ocupe todo el ancho de .category-link */
+    background-color: #FFF;
+    padding: 10px;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.category:hover {
+    transform: scale(1.05); /* Esto aumenta el tamaño del contenedor en un 5% */
+    transition: transform 0.3s ease-in-out; /* Animación suave para el cambio de tamaño */
+}
+
+.category-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex; /* Mantiene los enlaces como flex para centrar los contenidos internos */
+    width: 23%; /* Define un ancho para los enlaces */
+    margin: 10px; /* Ajusta los márgenes si es necesario */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.category-rutinas {
+    background-image: url('/assets/img/Cat Things.gif'); /* Asegúrate de que la ruta al archivo sea correcta */
+    background-size: cover;
+}
+
+.category-galeria {
+    background-image: url('/assets/img/Studio.gif'); /* Asegúrate de que la ruta al archivo sea correcta */
+    background-size: cover;
+}
+
+.category-blog {
+    background-image: url('/assets/img/Cat.gif'); /* Asegúrate de que la ruta al archivo sea correcta */
+    background-size: cover;
+}
+
+.category-amigos {
+    background-image: url('/assets/img/Friends.gif'); /* Asegúrate de que la ruta al archivo sea correcta */
+    background-size: cover;
+}
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 33vw;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    -moz-column-width: 20em; /* Firefox */
+    -webkit-column-width: 20em; /* webkit, Safari, Chrome */
+    column-width: 18em;
+    -moz-column-gap: 1em; /* Firefox */
+    -webkit-column-gap: 1em; /* webkit, Safari, Chrome */
+    column-gap: 1em;
+    max-width: 100%;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100% !important;
+    height: auto !important;
+    display: inline-block; /* Nuevos elementos de línea de bloqueo */
+    margin-bottom: 1em;
+    page-break-inside: avoid; /* Evitar que se corten entre columnas */
+    -webkit-column-break-inside: avoid; /* Chrome, Safari */
+    break-inside: avoid; /* CSS3 */
+}
+
+table {
+    border-collapse: collapse;
+    border: 2px solid rgb(200, 200, 200);
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    background-color: #FFF;
+}
+
+td {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+}
+
+th {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px 20px;
+    background-color: rgb(162, 162, 162);
+}
+
+input[type=text],
+input[type=email],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div.contenedor-formulario {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
